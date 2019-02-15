@@ -13,7 +13,18 @@
 		149F4D0E2216CCCE00D15BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0D2216CCCE00D15BC1 /* Assets.xcassets */; };
 		149F4D112216CCCE00D15BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0F2216CCCE00D15BC1 /* LaunchScreen.storyboard */; };
 		149F4D1C2216CEAB00D15BC1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D1B2216CEAB00D15BC1 /* Book.swift */; };
+		149F4D422216D2FB00D15BC1 /* MidiaDirtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D412216D2FB00D15BC1 /* MidiaDirtyTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		149F4D442216D2FB00D15BC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 149F4CFB2216CCCC00D15BC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 149F4D022216CCCC00D15BC1;
+			remoteInfo = MidiaDirty;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		149F4D032216CCCC00D15BC1 /* MidiaDirty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiaDirty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,20 @@
 		149F4D102216CCCE00D15BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		149F4D122216CCCE00D15BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		149F4D1B2216CEAB00D15BC1 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		149F4D3F2216D2FB00D15BC1 /* MidiaDirtyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidiaDirtyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		149F4D412216D2FB00D15BC1 /* MidiaDirtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiaDirtyTests.swift; sourceTree = "<group>"; };
+		149F4D432216D2FB00D15BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		149F4D002216CCCC00D15BC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		149F4D3C2216D2FB00D15BC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				149F4D052216CCCC00D15BC1 /* MidiaDirty */,
+				149F4D402216D2FB00D15BC1 /* MidiaDirtyTests */,
 				149F4D042216CCCC00D15BC1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				149F4D032216CCCC00D15BC1 /* MidiaDirty.app */,
+				149F4D3F2216D2FB00D15BC1 /* MidiaDirtyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +114,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		149F4D402216D2FB00D15BC1 /* MidiaDirtyTests */ = {
+			isa = PBXGroup;
+			children = (
+				149F4D412216D2FB00D15BC1 /* MidiaDirtyTests.swift */,
+				149F4D432216D2FB00D15BC1 /* Info.plist */,
+			);
+			path = MidiaDirtyTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,6 +143,24 @@
 			productReference = 149F4D032216CCCC00D15BC1 /* MidiaDirty.app */;
 			productType = "com.apple.product-type.application";
 		};
+		149F4D3E2216D2FB00D15BC1 /* MidiaDirtyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 149F4D482216D2FB00D15BC1 /* Build configuration list for PBXNativeTarget "MidiaDirtyTests" */;
+			buildPhases = (
+				149F4D3B2216D2FB00D15BC1 /* Sources */,
+				149F4D3C2216D2FB00D15BC1 /* Frameworks */,
+				149F4D3D2216D2FB00D15BC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				149F4D452216D2FB00D15BC1 /* PBXTargetDependency */,
+			);
+			name = MidiaDirtyTests;
+			productName = MidiaDirtyTests;
+			productReference = 149F4D3F2216D2FB00D15BC1 /* MidiaDirtyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -123,6 +173,10 @@
 				TargetAttributes = {
 					149F4D022216CCCC00D15BC1 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					149F4D3E2216D2FB00D15BC1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 149F4D022216CCCC00D15BC1;
 					};
 				};
 			};
@@ -140,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				149F4D022216CCCC00D15BC1 /* MidiaDirty */,
+				149F4D3E2216D2FB00D15BC1 /* MidiaDirtyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -152,6 +207,13 @@
 				149F4D112216CCCE00D15BC1 /* LaunchScreen.storyboard in Resources */,
 				149F4D0E2216CCCE00D15BC1 /* Assets.xcassets in Resources */,
 				149F4D0C2216CCCC00D15BC1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		149F4D3D2216D2FB00D15BC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +230,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		149F4D3B2216D2FB00D15BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				149F4D422216D2FB00D15BC1 /* MidiaDirtyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		149F4D452216D2FB00D15BC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 149F4D022216CCCC00D15BC1 /* MidiaDirty */;
+			targetProxy = 149F4D442216D2FB00D15BC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		149F4D0A2216CCCC00D15BC1 /* Main.storyboard */ = {
@@ -342,6 +420,46 @@
 			};
 			name = Release;
 		};
+		149F4D462216D2FB00D15BC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BD2Z379VB;
+				INFOPLIST_FILE = MidiaDirtyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuju.MidiaDirtyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MidiaDirty.app/MidiaDirty";
+			};
+			name = Debug;
+		};
+		149F4D472216D2FB00D15BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3BD2Z379VB;
+				INFOPLIST_FILE = MidiaDirtyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuju.MidiaDirtyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MidiaDirty.app/MidiaDirty";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +477,15 @@
 			buildConfigurations = (
 				149F4D162216CCCE00D15BC1 /* Debug */,
 				149F4D172216CCCE00D15BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		149F4D482216D2FB00D15BC1 /* Build configuration list for PBXNativeTarget "MidiaDirtyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				149F4D462216D2FB00D15BC1 /* Debug */,
+				149F4D472216D2FB00D15BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
