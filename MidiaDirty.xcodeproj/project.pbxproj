@@ -14,6 +14,7 @@
 		149F4D112216CCCE00D15BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0F2216CCCE00D15BC1 /* LaunchScreen.storyboard */; };
 		149F4D1C2216CEAB00D15BC1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D1B2216CEAB00D15BC1 /* Book.swift */; };
 		149F4D4A2216D32B00D15BC1 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D492216D32B00D15BC1 /* BookTests.swift */; };
+		149F4D4B2216D67D00D15BC1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D1B2216CEAB00D15BC1 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149F4D4B2216D67D00D15BC1 /* Book.swift in Sources */,
 				149F4D4A2216D32B00D15BC1 /* BookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +426,7 @@
 		149F4D462216D2FB00D15BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +449,7 @@
 		149F4D472216D2FB00D15BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
