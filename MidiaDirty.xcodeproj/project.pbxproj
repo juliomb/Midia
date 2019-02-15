@@ -54,14 +54,38 @@
 		149F4D052216CCCC00D15BC1 /* MidiaDirty */ = {
 			isa = PBXGroup;
 			children = (
-				149F4D062216CCCC00D15BC1 /* AppDelegate.swift */,
-				149F4D082216CCCC00D15BC1 /* ViewController.swift */,
-				149F4D0A2216CCCC00D15BC1 /* Main.storyboard */,
-				149F4D0D2216CCCE00D15BC1 /* Assets.xcassets */,
-				149F4D0F2216CCCE00D15BC1 /* LaunchScreen.storyboard */,
 				149F4D122216CCCE00D15BC1 /* Info.plist */,
+				149F4D062216CCCC00D15BC1 /* AppDelegate.swift */,
+				149F4D182216CE0A00D15BC1 /* Models */,
+				149F4D192216CE1400D15BC1 /* ViewControllers */,
+				149F4D1A2216CE2500D15BC1 /* Views */,
 			);
 			path = MidiaDirty;
+			sourceTree = "<group>";
+		};
+		149F4D182216CE0A00D15BC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		149F4D192216CE1400D15BC1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				149F4D082216CCCC00D15BC1 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		149F4D1A2216CE2500D15BC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				149F4D0D2216CCCE00D15BC1 /* Assets.xcassets */,
+				149F4D0A2216CCCC00D15BC1 /* Main.storyboard */,
+				149F4D0F2216CCCE00D15BC1 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
