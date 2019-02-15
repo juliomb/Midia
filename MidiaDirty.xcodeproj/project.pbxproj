@@ -13,7 +13,7 @@
 		149F4D0E2216CCCE00D15BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0D2216CCCE00D15BC1 /* Assets.xcassets */; };
 		149F4D112216CCCE00D15BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0F2216CCCE00D15BC1 /* LaunchScreen.storyboard */; };
 		149F4D1C2216CEAB00D15BC1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D1B2216CEAB00D15BC1 /* Book.swift */; };
-		149F4D422216D2FB00D15BC1 /* MidiaDirtyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D412216D2FB00D15BC1 /* MidiaDirtyTests.swift */; };
+		149F4D4A2216D32B00D15BC1 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D492216D32B00D15BC1 /* BookTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,8 @@
 		149F4D122216CCCE00D15BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		149F4D1B2216CEAB00D15BC1 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		149F4D3F2216D2FB00D15BC1 /* MidiaDirtyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidiaDirtyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		149F4D412216D2FB00D15BC1 /* MidiaDirtyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiaDirtyTests.swift; sourceTree = "<group>"; };
 		149F4D432216D2FB00D15BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		149F4D492216D32B00D15BC1 /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +117,8 @@
 		149F4D402216D2FB00D15BC1 /* MidiaDirtyTests */ = {
 			isa = PBXGroup;
 			children = (
-				149F4D412216D2FB00D15BC1 /* MidiaDirtyTests.swift */,
 				149F4D432216D2FB00D15BC1 /* Info.plist */,
+				149F4D492216D32B00D15BC1 /* BookTests.swift */,
 			);
 			path = MidiaDirtyTests;
 			sourceTree = "<group>";
@@ -176,6 +176,7 @@
 					};
 					149F4D3E2216D2FB00D15BC1 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 149F4D022216CCCC00D15BC1;
 					};
 				};
@@ -234,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				149F4D422216D2FB00D15BC1 /* MidiaDirtyTests.swift in Sources */,
+				149F4D4A2216D32B00D15BC1 /* BookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3BD2Z379VB;
 				INFOPLIST_FILE = MidiaDirtyTests/Info.plist;
@@ -434,6 +436,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuju.MidiaDirtyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MidiaDirty.app/MidiaDirty";
@@ -444,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3BD2Z379VB;
 				INFOPLIST_FILE = MidiaDirtyTests/Info.plist;

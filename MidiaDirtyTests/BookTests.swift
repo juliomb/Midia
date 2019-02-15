@@ -1,5 +1,5 @@
 //
-//  MidiaDirtyTests.swift
+//  BookTests.swift
 //  MidiaDirtyTests
 //
 //  Created by Julio Martínez Ballester on 2/15/19.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class MidiaDirtyTests: XCTestCase {
+class BookTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
