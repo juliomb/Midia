@@ -46,16 +46,26 @@ extension Book: Decodable {
         bookId = try container.decode(String.self, forKey: .bookId)
 
         let volumeInfo = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .volumeInfo)
+
         title = try volumeInfo.decode(String.self, forKey: .title)
         authors = try volumeInfo.decodeIfPresent([String].self, forKey: .authors)
+
         if let publishedDateString = try volumeInfo.decodeIfPresent(String.self, forKey: .publishedDate),
             let date = DateFormatter.booksAPIDateFormater.date(from: publishedDateString) {
             publishedDate = date
         } else {
             publishedDate = nil
         }
-        description = nil
-        coverURL = nil
+
+        description = try volumeInfo.decodeIfPresent(String.self, forKey: .description)
+
+        do {
+            let imageLinks = try volumeInfo.nestedContainer(keyedBy: CodingKeys.self, forKey: .imageLinks)
+            coverURL = try imageLinks.decodeIfPresent(URL.self, forKey: .coverURL)
+        } catch {
+            coverURL = nil
+        }
+
         rating = nil
         numberOfReviews = 0
         price = 0
