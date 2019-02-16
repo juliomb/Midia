@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BookCollection {
+struct BookCollection: Decodable {
 
     let kind: String
     let totalItems: Int
