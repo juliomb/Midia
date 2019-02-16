@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1453CBEC2218146E005C0B09 /* book-search-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1453CBEB2218146D005C0B09 /* book-search-response.json */; };
 		149F4D072216CCCC00D15BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D062216CCCC00D15BC1 /* AppDelegate.swift */; };
 		149F4D092216CCCC00D15BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D082216CCCC00D15BC1 /* ViewController.swift */; };
 		149F4D0C2216CCCC00D15BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0A2216CCCC00D15BC1 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1453CBEB2218146D005C0B09 /* book-search-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "book-search-response.json"; sourceTree = "<group>"; };
 		149F4D032216CCCC00D15BC1 /* MidiaDirty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiaDirty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		149F4D062216CCCC00D15BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		149F4D082216CCCC00D15BC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1453CBEA221813B3005C0B09 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1453CBEB2218146D005C0B09 /* book-search-response.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		149F4CFA2216CCCC00D15BC1 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		149F4D402216D2FB00D15BC1 /* MidiaDirtyTests */ = {
 			isa = PBXGroup;
 			children = (
+				1453CBEA221813B3005C0B09 /* Resources */,
 				149F4D432216D2FB00D15BC1 /* Info.plist */,
 				149F4D492216D32B00D15BC1 /* BookTests.swift */,
 			);
@@ -216,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1453CBEC2218146E005C0B09 /* book-search-response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
