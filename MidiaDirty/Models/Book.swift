@@ -47,7 +47,7 @@ extension Book: Decodable {
 
         let volumeInfo = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .volumeInfo)
         title = try volumeInfo.decode(String.self, forKey: .title)
-        authors = try volumeInfo.decode([String]?.self, forKey: .authors)
+        authors = try volumeInfo.decodeIfPresent([String].self, forKey: .authors)
         publishedDate = nil //try volumeInfo.decode(Date?.self, forKey: .publishedDate)
         description = nil
         coverURL = nil
