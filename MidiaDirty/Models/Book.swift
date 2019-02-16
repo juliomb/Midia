@@ -17,8 +17,8 @@ struct Book {
     let description: String?
     let coverURL: URL?
     let rating: Float?
-    let numberOfReviews: Int
-    let price: Float
+    let numberOfReviews: Int?
+    let price: Float?
     
 }
 
@@ -66,9 +66,16 @@ extension Book: Decodable {
             coverURL = nil
         }
 
-        rating = nil
-        numberOfReviews = 0
-        price = 0
+        rating = try volumeInfo.decodeIfPresent(Float.self, forKey: .rating)
+        numberOfReviews = try volumeInfo.decodeIfPresent(Int.self, forKey: .numberOfReviews)
+
+        do {
+            let saleInfo = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .saleInfo)
+            let listPrice = try saleInfo.nestedContainer(keyedBy: CodingKeys.self, forKey: .listPrice)
+            price = try listPrice.decodeIfPresent(Float.self, forKey: .price)
+        } catch {
+            price = nil
+        }
     }
 
 }
