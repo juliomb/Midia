@@ -10,6 +10,12 @@ import UIKit
 
 class MediaItemCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    var mediaItem: MediaItemProvidable! {
+        didSet {
+            titleLabel.text = mediaItem.title
+        }
+    }
+
+    @IBOutlet private weak var titleLabel: UILabel!
 
 }

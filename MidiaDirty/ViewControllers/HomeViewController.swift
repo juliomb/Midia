@@ -35,8 +35,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mediaItemCellIdentifier, for: indexPath) as? MediaItemCollectionViewCell else {
             fatalError()
         }
-        let mediaItem = mediaItems[indexPath.row]
-        cell.titleLabel.text = mediaItem.title
+        cell.mediaItem = mediaItems[indexPath.row]
         return cell
     }
 
