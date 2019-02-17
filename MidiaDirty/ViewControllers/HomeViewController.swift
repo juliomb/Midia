@@ -12,5 +12,27 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+
+}
+
+extension HomeViewController: UICollectionViewDelegate {
 
 }
