@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     let mediaItemCellIdentifier = "MediaItemCell"
 
-    let mediaItems: [MediaItemProvidable] = [Book(bookId: "1", title: "First book"), Book(bookId: "2", title: "Second Book")]
+    var mediaItems: [MediaItemProvidable]!
 
     @IBOutlet weak var collectionView: UICollectionView!
 
