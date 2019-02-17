@@ -79,3 +79,11 @@ extension Book: Decodable {
     }
 
 }
+
+extension Book: MediaItemProvidable {
+
+    var imageURL: URL? {
+        return coverURL
+    }
+
+}
