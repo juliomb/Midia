@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MediaItemCollectionViewCell.swift
 //  MidiaDirty
 //
 //  Created by Julio Martínez Ballester on 2/17/19.
@@ -8,9 +8,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class MediaItemCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var titleLabel: UILabel!
 
 }
