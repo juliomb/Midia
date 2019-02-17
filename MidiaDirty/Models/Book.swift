@@ -19,6 +19,19 @@ struct Book {
     let rating: Float?
     let numberOfReviews: Int?
     let price: Float?
+
+    // TODO: eliminar cuando tengamos la capa de red
+    init(bookId: String, title: String) {
+        self.bookId = bookId
+        self.title = title
+        authors = nil
+        publishedDate = nil
+        description = nil
+        coverURL = nil
+        rating = nil
+        numberOfReviews = nil
+        price = nil
+    }
     
 }
 
