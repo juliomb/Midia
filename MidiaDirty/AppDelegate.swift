@@ -19,9 +19,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Wrong initial View Controller, expected \(HomeViewController.description())")
         }
 
-        homeViewController.mediaItems = [Book(bookId: "1", title: "First book"), Book(bookId: "2", title: "Second Book")]
+        let mediaItems: [MediaItemProvidable] = [Game(name: "PSE", coverURL: nil), Game(name: "FIFA", coverURL: nil), Book(bookId: "1", title: "First book"), Book(bookId: "2", title: "Second Book")]
+        homeViewController.mediaItems = mediaItems
         return true
     }
 
 }
 
+// TODO: eliminar, solo para demostración
+struct Game {
+
+    let name: String
+    let coverURL: URL?
+
+}
+
+extension Game: MediaItemProvidable {
+
+    var title: String {
+        return name
+    }
+
+    var imageURL: URL? {
+        return coverURL
+    }
+
+}
