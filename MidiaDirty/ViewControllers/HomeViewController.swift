@@ -9,5 +9,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+
+    @IBOutlet weak var collectionView: UICollectionView!
     
+
 }
