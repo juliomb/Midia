@@ -33,6 +33,10 @@ class MediaItemProvider {
         }
     }
 
+    func getLatestMediaItems() -> [MediaItemProvidable] {
+        return apiConsumer.getLatestMediaItems()
+    }
+
 }
 
 // TODO: mover a test cuando terminemos con la network layer
