@@ -24,23 +24,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
-// TODO: eliminar, solo para demostración
-struct Game {
-
-    let name: String
-    let coverURL: URL?
-
-}
-
-extension Game: MediaItemProvidable {
-
-    var title: String {
-        return name
-    }
-
-    var imageURL: URL? {
-        return coverURL
-    }
-
-}
