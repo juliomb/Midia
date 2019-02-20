@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     let mediaItemCellIdentifier = "MediaItemCell"
 
+    var mediaItemProvider: MediaItemProvider!
     var mediaItems: [MediaItemProvidable]!
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,6 +22,8 @@ class HomeViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
+
+        mediaItems = mediaItemProvider.getLatestMediaItems()
     }
 
 }
