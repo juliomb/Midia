@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		140FD1AE221D6E7B003A79DD /* MediaItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FD1AD221D6E7B003A79DD /* MediaItemProvider.swift */; };
 		1453CBEC2218146E005C0B09 /* book-search-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1453CBEB2218146D005C0B09 /* book-search-response.json */; };
 		1453CBEE22181601005C0B09 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453CBED22181601005C0B09 /* BookCollection.swift */; };
 		1453CBEF22181601005C0B09 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453CBED22181601005C0B09 /* BookCollection.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		140FD1AD221D6E7B003A79DD /* MediaItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemProvider.swift; sourceTree = "<group>"; };
 		1453CBEB2218146D005C0B09 /* book-search-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "book-search-response.json"; sourceTree = "<group>"; };
 		1453CBED22181601005C0B09 /* BookCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollection.swift; sourceTree = "<group>"; };
 		1453CBF12218272B005C0B09 /* DateFormatter+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Custom.swift"; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140FD1AC221D6CE9003A79DD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				140FD1AD221D6E7B003A79DD /* MediaItemProvider.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		1453CBEA221813B3005C0B09 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 				149F4D192216CE1400D15BC1 /* ViewControllers */,
 				149F4D1A2216CE2500D15BC1 /* Views */,
 				1453CBF0221826DA005C0B09 /* Extensions */,
+				140FD1AC221D6CE9003A79DD /* Network */,
 			);
 			path = MidiaDirty;
 			sourceTree = "<group>";
@@ -283,6 +294,7 @@
 				1453CBEE22181601005C0B09 /* BookCollection.swift in Sources */,
 				1453CBFD2219D8F6005C0B09 /* MediaItemProvidable.swift in Sources */,
 				149F4D1C2216CEAB00D15BC1 /* Book.swift in Sources */,
+				140FD1AE221D6E7B003A79DD /* MediaItemProvider.swift in Sources */,
 				1453CBF22218272B005C0B09 /* DateFormatter+Custom.swift in Sources */,
 				1453CBF82219D08C005C0B09 /* MediaItemCollectionViewCell.swift in Sources */,
 				1453CBF52219698E005C0B09 /* HomeViewController.swift in Sources */,
