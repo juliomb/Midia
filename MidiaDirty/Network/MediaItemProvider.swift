@@ -13,3 +13,13 @@ enum MediaItemKind {
     case movie
     case game
 }
+
+class MediaItemProvider {
+
+    let mediaItemKind: MediaItemKind
+
+    init(withMediaItemKind mediaItemKind: MediaItemKind) {
+        self.mediaItemKind = mediaItemKind
+    }
+
+}
