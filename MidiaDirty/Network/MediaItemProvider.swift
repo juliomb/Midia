@@ -17,9 +17,29 @@ enum MediaItemKind {
 class MediaItemProvider {
 
     let mediaItemKind: MediaItemKind
+    let apiConsumer : MediaItemAPIConsumable
 
-    init(withMediaItemKind mediaItemKind: MediaItemKind) {
+    private init(withMediaItemKind mediaItemKind: MediaItemKind, apiConsumer: MediaItemAPIConsumable) {
         self.mediaItemKind = mediaItemKind
+        self.apiConsumer = apiConsumer
+    }
+
+    convenience init(withMediaItemKind mediaItemKind: MediaItemKind) {
+        switch mediaItemKind {
+        case .book:
+            self.init(withMediaItemKind: mediaItemKind, apiConsumer: MockMediaItemAPIConsumer()) // TODO: cambiar cuando tengamos la verdad
+        case .game, .movie:
+            fatalError("MediaItemKind not supported yet :-( coming soon")
+        }
+    }
+
+}
+
+// TODO: mover a test cuando terminemos con la network layer
+class MockMediaItemAPIConsumer: MediaItemAPIConsumable {
+
+    func getLatestMediaItems() -> [MediaItemProvidable] {
+        return [Game(name: "PSE", coverURL: nil), Game(name: "FIFA", coverURL: nil)]
     }
 
 }
