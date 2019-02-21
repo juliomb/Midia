@@ -33,8 +33,15 @@ class MediaItemProvider {
         }
     }
 
-    func getLatestMediaItems() -> [MediaItemProvidable] {
-        return apiConsumer.getLatestMediaItems()
+    func getLatestMediaItems(onSuccess success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (String) -> Void) {
+        apiConsumer.getLatestMediaItems(onSuccess: { (mediaItems) in
+            // chequeamos que estamos volviendo en el hilo principal
+            assert(Thread.current == Thread.main)
+            // podríamos guardar en caché y presentar en caso de error por ejemplo
+            success(mediaItems)
+        }) { (error) in
+            failure(error.localizedDescription)
+        }
     }
 
 }
@@ -42,8 +49,8 @@ class MediaItemProvider {
 // TODO: mover a test cuando terminemos con la network layer
 class MockMediaItemAPIConsumer: MediaItemAPIConsumable {
 
-    func getLatestMediaItems() -> [MediaItemProvidable] {
-        return [Game(name: "PSE", coverURL: nil), Game(name: "FIFA", coverURL: nil)]
+    func getLatestMediaItems(onSuccess success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (Error) -> Void) {
+        success([Game(name: "PSE", coverURL: nil), Game(name: "FIFA", coverURL: nil)])
     }
 
 }

@@ -23,7 +23,13 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
 
-        mediaItems = mediaItemProvider.getLatestMediaItems()
+        // TODO: vista cargando
+        mediaItemProvider.getLatestMediaItems(onSuccess: { [weak self] mediaItems in
+            self?.mediaItems = mediaItems
+            self?.collectionView.reloadData()
+        }) { errorMessage in
+            // TODO: mostrar mensaje de error
+        }
     }
 
 }
