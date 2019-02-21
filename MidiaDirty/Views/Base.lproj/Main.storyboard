@@ -65,7 +65,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-XL-JNH">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-XL-JNH">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </activityIndicatorView>
@@ -106,7 +106,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="6SM-XL-JNH" id="2B3-m9-6vo"/>
                         <outlet property="collectionView" destination="2UY-MV-tdb" id="VKo-87-6xk"/>
+                        <outlet property="stateEmojiLabel" destination="vFO-0l-c5D" id="wUN-kK-zOI"/>
+                        <outlet property="stateTextLabel" destination="PiV-7b-rMQ" id="c0w-OA-4oo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
