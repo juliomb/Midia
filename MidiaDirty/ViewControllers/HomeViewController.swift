@@ -10,6 +10,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    enum HomeViewControllerState {
+        case loading
+        case noResults
+        case noConnection
+        case ready
+    }
+
+    var state: HomeViewControllerState = .loading
+
     let mediaItemCellIdentifier = "MediaItemCell"
 
     var mediaItemProvider: MediaItemProvider!
