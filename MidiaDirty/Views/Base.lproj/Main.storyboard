@@ -65,13 +65,43 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6SM-XL-JNH">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☹️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFO-0l-c5D">
+                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7yR-7o-mx0"/>
+                                    <constraint firstAttribute="height" constant="50" id="e6V-xI-8Uf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiV-7b-rMQ">
+                                <rect key="frame" x="15" y="365" width="345" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="3uh-rT-tFx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2UY-MV-tdb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Ty-Jo-qM0"/>
                             <constraint firstItem="2UY-MV-tdb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BIr-yX-cBY"/>
+                            <constraint firstItem="PiV-7b-rMQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-15" id="EK9-hh-dg1"/>
+                            <constraint firstItem="vFO-0l-c5D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PbD-pg-B4l"/>
                             <constraint firstItem="2UY-MV-tdb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PvZ-mS-Wd8"/>
+                            <constraint firstItem="PiV-7b-rMQ" firstAttribute="top" secondItem="6SM-XL-JNH" secondAttribute="bottom" constant="13" id="Qca-hE-5Sy"/>
+                            <constraint firstItem="vFO-0l-c5D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R9w-eJ-pBS"/>
+                            <constraint firstItem="PiV-7b-rMQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Zjp-TF-PDk"/>
                             <constraint firstItem="2UY-MV-tdb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aHs-Cq-J1n"/>
+                            <constraint firstItem="6SM-XL-JNH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBo-Wy-2ac"/>
+                            <constraint firstItem="6SM-XL-JNH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qlZ-zS-T7n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
