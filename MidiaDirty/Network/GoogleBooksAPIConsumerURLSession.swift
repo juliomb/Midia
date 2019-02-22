@@ -10,8 +10,20 @@ import Foundation
 
 class GoogleBooksAPIConsumerURLSession: MediaItemAPIConsumable {
 
-    let baseURL = URL(string: "https://www.googleapis.com/books/v1/volumes?q=")!
     let apiKey = "AIzaSyBUUhlpyxGklV31hSETfN5bVaNgtnsgFfU"
+
+    let session = URLSession.shared
+
+    func absoluteURL(withQueryParamas queryParams: [String]) -> URL {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "googleapis.com"
+        components.path = "/books/v1/volumes"
+        components.queryItems = [URLQueryItem(name: "key", value: apiKey)]
+        components.queryItems?.append(URLQueryItem(name: "q", value: queryParams.joined(separator: "+")))
+
+        return components.url!
+    }
 
     func getLatestMediaItems(onSuccess success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (Error) -> Void) {
 
