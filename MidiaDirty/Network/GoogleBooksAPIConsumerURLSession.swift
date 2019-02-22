@@ -17,7 +17,7 @@ class GoogleBooksAPIConsumerURLSession: MediaItemAPIConsumable {
     func absoluteURL(withQueryParamas queryParams: [String]) -> URL {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "googleapis.com"
+        components.host = "www.googleapis.com"
         components.path = "/books/v1/volumes"
         components.queryItems = [URLQueryItem(name: "key", value: apiKey)]
         components.queryItems?.append(URLQueryItem(name: "q", value: queryParams.joined(separator: "+")))
