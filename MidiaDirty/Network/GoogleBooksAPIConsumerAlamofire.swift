@@ -22,7 +22,7 @@ class GoogleBooksAPIConsumerAlamofire: MediaItemAPIConsumable {
                     do {
                         let decoder = JSONDecoder()
                         let bookCollection = try decoder.decode(BookCollection.self, from: data)
-                        success(bookCollection.items ?? [])
+                        success(bookCollection.items ?? []) // NO HACE FALTA DISPATCH IN MAIN THREAD
                     } catch {
                         failure(error) // Error parseando, lo enviamos directamente, no es el mismo que taskError
                     }
@@ -31,7 +31,7 @@ class GoogleBooksAPIConsumerAlamofire: MediaItemAPIConsumable {
                 }
             }
         }
-        
+
     }
 
 }
