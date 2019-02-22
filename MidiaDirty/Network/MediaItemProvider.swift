@@ -27,7 +27,7 @@ class MediaItemProvider {
     convenience init(withMediaItemKind mediaItemKind: MediaItemKind) {
         switch mediaItemKind {
         case .book:
-            self.init(withMediaItemKind: mediaItemKind, apiConsumer: GoogleBooksAPIConsumerURLSession())
+            self.init(withMediaItemKind: mediaItemKind, apiConsumer: GoogleBooksAPIConsumerAlamofire())
         case .game, .movie:
             fatalError("MediaItemKind not supported yet :-( coming soon")
         }
