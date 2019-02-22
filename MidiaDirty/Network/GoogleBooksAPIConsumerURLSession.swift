@@ -32,7 +32,7 @@ class GoogleBooksAPIConsumerURLSession: MediaItemAPIConsumable {
         let task = session.dataTask(with: url) { (data, response, taskError) in
 
             if let taskError = taskError {
-                failure(taskError)
+                DispatchQueue.main.async { failure(taskError) }
                 return
             }
 
@@ -40,12 +40,12 @@ class GoogleBooksAPIConsumerURLSession: MediaItemAPIConsumable {
                 do {
                     let decoder = JSONDecoder()
                     let bookCollection = try decoder.decode(BookCollection.self, from: data)
-                    success(bookCollection.items ?? [])
+                    DispatchQueue.main.async { success(bookCollection.items ?? []) }
                 } catch {
-                    failure(error) // Error parseando, lo enviamos directamente, no es el mismo que taskError
+                    DispatchQueue.main.async { failure(error) } // Error parseando, lo enviamos directamente, no es el mismo que taskError
                 }
             } else {
-                success([])
+                DispatchQueue.main.async { success([]) }
             }
 
         }
