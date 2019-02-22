@@ -1,5 +1,5 @@
 //
-//  GoogleBooksAPIConsumer.swift
+//  GoogleBooksAPIConsumerURLSession.swift
 //  MidiaDirty
 //
 //  Created by Julio Martínez Ballester on 2/22/19.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-class GoogleBooksAPIConsumer: MediaItemAPIConsumable {
+class GoogleBooksAPIConsumerURLSession: MediaItemAPIConsumable {
 
     let baseURL = URL(string: "https://www.googleapis.com/books/v1/volumes?q=")!
     let apiKey = "AIzaSyBUUhlpyxGklV31hSETfN5bVaNgtnsgFfU"
 
     func getLatestMediaItems(onSuccess success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (Error) -> Void) {
-        
+
     }
 
 }
