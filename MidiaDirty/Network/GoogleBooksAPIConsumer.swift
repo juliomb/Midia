@@ -10,6 +10,9 @@ import Foundation
 
 class GoogleBooksAPIConsumer: MediaItemAPIConsumable {
 
+    let baseURL = URL(string: "https://www.googleapis.com/books/v1/volumes?q=")!
+    let apiKey = "AIzaSyBUUhlpyxGklV31hSETfN5bVaNgtnsgFfU"
+
     func getLatestMediaItems(onSuccess success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (Error) -> Void) {
         
     }
