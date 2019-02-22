@@ -40,6 +40,8 @@ class MediaItemProvider {
             // podríamos guardar en caché y presentar en caso de error por ejemplo
             success(mediaItems)
         }) { (error) in
+            // chequeamos que estamos volviendo en el hilo principal
+            assert(Thread.current == Thread.main)
             failure(error.localizedDescription)
         }
     }

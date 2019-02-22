@@ -27,6 +27,31 @@ class GoogleBooksAPIConsumerURLSession: MediaItemAPIConsumable {
 
     func getLatestMediaItems(onSuccess success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (Error) -> Void) {
 
+        let url = absoluteURL(withQueryParamas: ["2019"])
+
+        let task = session.dataTask(with: url) { (data, response, taskError) in
+
+            if let taskError = taskError {
+                failure(taskError)
+                return
+            }
+
+            if let data = data {
+                do {
+                    let decoder = JSONDecoder()
+                    let bookCollection = try decoder.decode(BookCollection.self, from: data)
+                    success(bookCollection.items ?? [])
+                } catch {
+                    failure(error) // Error parseando, lo enviamos directamente, no es el mismo que taskError
+                }
+            } else {
+                success([])
+            }
+
+        }
+
+        task.resume()
+
     }
 
 }
