@@ -34,6 +34,7 @@
 		14D822522220067600CEA3B2 /* GoogleBooksAPIConsumerURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D822512220067600CEA3B2 /* GoogleBooksAPIConsumerURLSession.swift */; };
 		14D822532220067600CEA3B2 /* GoogleBooksAPIConsumerURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D822512220067600CEA3B2 /* GoogleBooksAPIConsumerURLSession.swift */; };
 		14D822552220197A00CEA3B2 /* GoogleBooksAPIConsumerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D822542220197A00CEA3B2 /* GoogleBooksAPIConsumerAlamofire.swift */; };
+		14D8225722201A9200CEA3B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8225622201A9200CEA3B2 /* Constants.swift */; };
 		E2B3AA83B8609C44FF6CA16F /* Pods_MidiaDirtyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F388CCCC9C1518DC908CA57 /* Pods_MidiaDirtyTests.framework */; };
 		F82F3738CA2ECDE74A415126 /* Pods_MidiaDirty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FB311EC71F8DC6D56394F9 /* Pods_MidiaDirty.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		149F4D492216D32B00D15BC1 /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
 		14D822512220067600CEA3B2 /* GoogleBooksAPIConsumerURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIConsumerURLSession.swift; sourceTree = "<group>"; };
 		14D822542220197A00CEA3B2 /* GoogleBooksAPIConsumerAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIConsumerAlamofire.swift; sourceTree = "<group>"; };
+		14D8225622201A9200CEA3B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		18EC2D2A63CFF28DEB432BB0 /* Pods-MidiaDirty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiaDirty.release.xcconfig"; path = "Pods/Target Support Files/Pods-MidiaDirty/Pods-MidiaDirty.release.xcconfig"; sourceTree = "<group>"; };
 		48361C45837E40FB4FF33756 /* Pods-MidiaDirtyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiaDirtyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MidiaDirtyTests/Pods-MidiaDirtyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8758D5579E994A41C7B3EC5A /* Pods-MidiaDirty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MidiaDirty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MidiaDirty/Pods-MidiaDirty.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				149F4D122216CCCE00D15BC1 /* Info.plist */,
 				149F4D062216CCCC00D15BC1 /* AppDelegate.swift */,
+				14D8225622201A9200CEA3B2 /* Constants.swift */,
 				149F4D182216CE0A00D15BC1 /* Models */,
 				1453CBFB2219D8CF005C0B09 /* Protocols */,
 				149F4D192216CE1400D15BC1 /* ViewControllers */,
@@ -417,6 +420,7 @@
 				1453CBFD2219D8F6005C0B09 /* MediaItemProvidable.swift in Sources */,
 				149F4D1C2216CEAB00D15BC1 /* Book.swift in Sources */,
 				140FD1AE221D6E7B003A79DD /* MediaItemProvider.swift in Sources */,
+				14D8225722201A9200CEA3B2 /* Constants.swift in Sources */,
 				1453CBF22218272B005C0B09 /* DateFormatter+Custom.swift in Sources */,
 				1453CBF82219D08C005C0B09 /* MediaItemCollectionViewCell.swift in Sources */,
 				14D822552220197A00CEA3B2 /* GoogleBooksAPIConsumerAlamofire.swift in Sources */,
