@@ -7,6 +7,7 @@ target 'MidiaDirty' do
 
   # Pods for MidiaDirty
   pod 'Alamofire'
+  pod 'SDWebImage'
 
   target 'MidiaDirtyTests' do
     inherit! :search_paths
