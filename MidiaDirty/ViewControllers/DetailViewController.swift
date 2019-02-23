@@ -17,12 +17,26 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var creatorLabel: UILabel!
+    @IBOutlet weak var ratingsContainerView: UIView!
+    @IBOutlet weak var ratingsLabel: UILabel!
+    @IBOutlet weak var numberOfReviewsLabel: UILabel!
+    @IBOutlet weak var creationDateLabel: UILabel!
+    @IBOutlet weak var buyButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadingView.isHidden = false
         mediaItemProvider.getMediaItem(byId: mediaItemId, success: { [weak self] (detailedMediaItem) in
             self?.detailedMediaItem = detailedMediaItem
+            self?.loadingView.isHidden = true
+            self?.syncViewWithModel()
         }) { [weak self] (error) in
             let alertController = UIAlertController(title: nil, message: "Error recuperando los detalles del item. Disculpe las molestias.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
@@ -34,6 +48,10 @@ class DetailViewController: UIViewController {
 
     @IBAction func didTapCloseButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+
+    func syncViewWithModel() {
+        
     }
 
 }

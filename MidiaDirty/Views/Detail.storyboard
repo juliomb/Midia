@@ -161,7 +161,17 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="wFo-Dg-Wmn" id="LaQ-YU-5KN"/>
+                        <outlet property="buyButton" destination="Mtg-VJ-Inq" id="5Lm-vY-Lf1"/>
+                        <outlet property="creationDateLabel" destination="XvN-xT-4HN" id="QLh-em-BX8"/>
+                        <outlet property="creatorLabel" destination="S5Z-3a-eKR" id="GuC-Tc-mdA"/>
+                        <outlet property="descriptionTextView" destination="iPI-Cb-gHT" id="PeC-Ls-AVG"/>
+                        <outlet property="imageView" destination="fLw-jH-1f4" id="TRE-ph-jWK"/>
                         <outlet property="loadingView" destination="HOg-Am-gg6" id="aBy-yM-5QX"/>
+                        <outlet property="numberOfReviewsLabel" destination="P8v-xn-OmQ" id="H3R-rs-Eed"/>
+                        <outlet property="ratingsContainerView" destination="iLh-Up-FkS" id="Jlw-Sn-qYi"/>
+                        <outlet property="ratingsLabel" destination="13R-qm-izi" id="Zt4-Qa-bcX"/>
+                        <outlet property="stackView" destination="P9n-Ss-gvR" id="09h-yc-mbn"/>
+                        <outlet property="titleLabel" destination="Jgp-RE-r0o" id="ypY-If-uub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1r-YT-nEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
