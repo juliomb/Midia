@@ -24,6 +24,9 @@
 		1453CBF92219D08C005C0B09 /* MediaItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453CBF72219D08C005C0B09 /* MediaItemCollectionViewCell.swift */; };
 		1453CBFD2219D8F6005C0B09 /* MediaItemProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453CBFC2219D8F6005C0B09 /* MediaItemProvidable.swift */; };
 		1453CBFE2219D8F6005C0B09 /* MediaItemProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453CBFC2219D8F6005C0B09 /* MediaItemProvidable.swift */; };
+		14632C8922217A5E0015170E /* MediaItemProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C8822217A5E0015170E /* MediaItemProviderTests.swift */; };
+		14632C8A22217DB30015170E /* GoogleBooksAPIConsumerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D822542220197A00CEA3B2 /* GoogleBooksAPIConsumerAlamofire.swift */; };
+		14632C8B22217DC60015170E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8225622201A9200CEA3B2 /* Constants.swift */; };
 		149F4D072216CCCC00D15BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D062216CCCC00D15BC1 /* AppDelegate.swift */; };
 		149F4D0C2216CCCC00D15BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0A2216CCCC00D15BC1 /* Main.storyboard */; };
 		149F4D0E2216CCCE00D15BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0D2216CCCE00D15BC1 /* Assets.xcassets */; };
@@ -59,6 +62,7 @@
 		1453CBF42219698E005C0B09 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1453CBF72219D08C005C0B09 /* MediaItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		1453CBFC2219D8F6005C0B09 /* MediaItemProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemProvidable.swift; sourceTree = "<group>"; };
+		14632C8822217A5E0015170E /* MediaItemProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemProviderTests.swift; sourceTree = "<group>"; };
 		149F4D032216CCCC00D15BC1 /* MidiaDirty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiaDirty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		149F4D062216CCCC00D15BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		149F4D0B2216CCCC00D15BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 				1453CBEA221813B3005C0B09 /* Resources */,
 				149F4D432216D2FB00D15BC1 /* Info.plist */,
 				149F4D492216D32B00D15BC1 /* BookTests.swift */,
+				14632C8822217A5E0015170E /* MediaItemProviderTests.swift */,
 			);
 			path = MidiaDirtyTests;
 			sourceTree = "<group>";
@@ -436,12 +441,15 @@
 				140FD1B4221D7BF1003A79DD /* MediaItemAPIConsumable.swift in Sources */,
 				140FD1B5221D7C06003A79DD /* Game.swift in Sources */,
 				1453CBF62219698E005C0B09 /* HomeViewController.swift in Sources */,
+				14632C8A22217DB30015170E /* GoogleBooksAPIConsumerAlamofire.swift in Sources */,
 				149F4D4B2216D67D00D15BC1 /* Book.swift in Sources */,
+				14632C8922217A5E0015170E /* MediaItemProviderTests.swift in Sources */,
 				1453CBFE2219D8F6005C0B09 /* MediaItemProvidable.swift in Sources */,
 				1453CBF32218272B005C0B09 /* DateFormatter+Custom.swift in Sources */,
 				140FD1B3221D7BEE003A79DD /* MediaItemProvider.swift in Sources */,
 				149F4D4A2216D32B00D15BC1 /* BookTests.swift in Sources */,
 				1453CBF92219D08C005C0B09 /* MediaItemCollectionViewCell.swift in Sources */,
+				14632C8B22217DC60015170E /* Constants.swift in Sources */,
 				14D822532220067600CEA3B2 /* GoogleBooksAPIConsumerURLSession.swift in Sources */,
 				1453CBEF22181601005C0B09 /* BookCollection.swift in Sources */,
 			);

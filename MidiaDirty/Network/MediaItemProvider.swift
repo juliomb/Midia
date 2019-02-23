@@ -19,7 +19,7 @@ class MediaItemProvider {
     let mediaItemKind: MediaItemKind
     let apiConsumer : MediaItemAPIConsumable
 
-    private init(withMediaItemKind mediaItemKind: MediaItemKind, apiConsumer: MediaItemAPIConsumable) {
+    init(withMediaItemKind mediaItemKind: MediaItemKind, apiConsumer: MediaItemAPIConsumable) {
         self.mediaItemKind = mediaItemKind
         self.apiConsumer = apiConsumer
     }
@@ -44,15 +44,6 @@ class MediaItemProvider {
             assert(Thread.current == Thread.main)
             failure(error.localizedDescription)
         }
-    }
-
-}
-
-// TODO: mover a test cuando terminemos con la network layer
-class MockMediaItemAPIConsumer: MediaItemAPIConsumable {
-
-    func getLatestMediaItems(onSuccess success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (Error) -> Void) {
-        success([Game(name: "PSE", coverURL: nil), Game(name: "FIFA", coverURL: nil)])
     }
 
 }
