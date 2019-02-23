@@ -36,6 +36,8 @@
 		14632C992221EA430015170E /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14632C972221EA430015170E /* Detail.storyboard */; };
 		14632C9B2221EA740015170E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C9A2221EA740015170E /* DetailViewController.swift */; };
 		14632C9C2221EA740015170E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C9A2221EA740015170E /* DetailViewController.swift */; };
+		14632C9E2221F7390015170E /* MediaItemDetailProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C9D2221F7390015170E /* MediaItemDetailProvidable.swift */; };
+		14632C9F2221F7390015170E /* MediaItemDetailProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C9D2221F7390015170E /* MediaItemDetailProvidable.swift */; };
 		149F4D072216CCCC00D15BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D062216CCCC00D15BC1 /* AppDelegate.swift */; };
 		149F4D0C2216CCCC00D15BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0A2216CCCC00D15BC1 /* Main.storyboard */; };
 		149F4D0E2216CCCE00D15BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0D2216CCCE00D15BC1 /* Assets.xcassets */; };
@@ -78,6 +80,7 @@
 		14632C942221CEB70015170E /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		14632C972221EA430015170E /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		14632C9A2221EA740015170E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		14632C9D2221F7390015170E /* MediaItemDetailProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemDetailProvidable.swift; sourceTree = "<group>"; };
 		149F4D032216CCCC00D15BC1 /* MidiaDirty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiaDirty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		149F4D062216CCCC00D15BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		149F4D0B2216CCCC00D15BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				1453CBFC2219D8F6005C0B09 /* MediaItemProvidable.swift */,
+				14632C9D2221F7390015170E /* MediaItemDetailProvidable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -458,6 +462,7 @@
 				140FD1B2221D7AE7003A79DD /* Game.swift in Sources */,
 				149F4D072216CCCC00D15BC1 /* AppDelegate.swift in Sources */,
 				1453CBEE22181601005C0B09 /* BookCollection.swift in Sources */,
+				14632C9E2221F7390015170E /* MediaItemDetailProvidable.swift in Sources */,
 				1453CBFD2219D8F6005C0B09 /* MediaItemProvidable.swift in Sources */,
 				149F4D1C2216CEAB00D15BC1 /* Book.swift in Sources */,
 				14632C8D222182A60015170E /* UIImageView+Networking.swift in Sources */,
@@ -481,6 +486,7 @@
 				1453CBF62219698E005C0B09 /* HomeViewController.swift in Sources */,
 				14632C8A22217DB30015170E /* GoogleBooksAPIConsumerAlamofire.swift in Sources */,
 				149F4D4B2216D67D00D15BC1 /* Book.swift in Sources */,
+				14632C9F2221F7390015170E /* MediaItemDetailProvidable.swift in Sources */,
 				14632C8922217A5E0015170E /* MediaItemProviderTests.swift in Sources */,
 				1453CBFE2219D8F6005C0B09 /* MediaItemProvidable.swift in Sources */,
 				14632C9C2221EA740015170E /* DetailViewController.swift in Sources */,
