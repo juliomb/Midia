@@ -45,4 +45,8 @@ class GoogleBooksAPIConsumerURLSession: MediaItemAPIConsumable {
         success([]) // TODO: completar en casa
     }
 
+    func getMediaItem(byId id: String, success: @escaping (MediaItemDetailProvidable) -> Void, failure: @escaping (Error) -> Void) {
+        // TODO: completar en casa
+    }
+
 }

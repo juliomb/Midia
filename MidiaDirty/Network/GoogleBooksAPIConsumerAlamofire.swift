@@ -57,4 +57,8 @@ class GoogleBooksAPIConsumerAlamofire: MediaItemAPIConsumable {
         }
     }
 
+    func getMediaItem(byId id: String, success: @escaping (MediaItemDetailProvidable) -> Void, failure: @escaping (Error) -> Void) {
+
+    }
+
 }
