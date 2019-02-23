@@ -104,3 +104,15 @@ extension Book: MediaItemProvidable {
     }
 
 }
+
+extension Book: MediaItemDetailProvidable {
+
+    var creatorName: String? {
+        return authors?.joined(separator: ", ")
+    }
+
+    var creationDate: Date? {
+        return publishedDate
+    }
+
+}
