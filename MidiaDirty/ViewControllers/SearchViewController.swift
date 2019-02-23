@@ -26,10 +26,32 @@ class SearchViewController: UIViewController {
         searchBar.delegate = self
     }
 
+    func performSearch() {
+        guard let searchText = searchBar.text else {
+            return
+        }
+        activityIndicator.isHidden = false
+        mediaItemProvider.getMediaItems(withQueryParams: searchText, success: { [weak self] (mediaItems) in
+            self?.mediaItems = mediaItems
+            self?.collectionView.reloadData()
+            if mediaItems.count == 0 {
+                let alertController = UIAlertController(title: nil, message: "La búqueda no ha devuelto ningún resultado 😞", preferredStyle: .alert)
+                self?.present(alertController, animated: true, completion: nil)
+            }
+            self?.activityIndicator.isHidden = true
+        }) { [weak self] (error) in
+            let alertController = UIAlertController(title: nil, message: "La búqueda ha fallado, por favor compruebe que tiene conexión.", preferredStyle: .alert)
+            self?.present(alertController, animated: true, completion: nil)
+            self?.activityIndicator.isHidden = true
+        }
+    }
+    
 }
 
 extension SearchViewController: UISearchBarDelegate {
 
-    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        performSearch()
+    }
 
 }
