@@ -10,12 +10,17 @@ import Foundation
 
 struct Game {
 
+    let gameId: String
     let name: String
     let coverURL: URL?
 
 }
 
 extension Game: MediaItemProvidable {
+
+    var mediaItemId: String {
+        return gameId
+    }
 
     var title: String {
         return name

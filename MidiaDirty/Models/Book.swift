@@ -95,6 +95,10 @@ extension Book: Decodable {
 
 extension Book: MediaItemProvidable {
 
+    var mediaItemId: String {
+        return bookId
+    }
+
     var imageURL: URL? {
         return coverURL
     }

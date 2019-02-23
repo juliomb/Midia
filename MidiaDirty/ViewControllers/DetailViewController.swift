@@ -10,5 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var mediaItemId: String!
+    var mediaItemProvider: MediaItemProvider!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
 }
