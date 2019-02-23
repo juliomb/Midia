@@ -56,4 +56,14 @@ class MediaItemProvider {
         }
     }
 
+    func getMediaItem(byId id: String, success: @escaping (MediaItemDetailProvidable) -> Void, failure: @escaping (String) -> Void) {
+        apiConsumer.getMediaItem(byId: id, success: { (detailedMediaItem) in
+            assert(Thread.current == Thread.main)
+            success(detailedMediaItem)
+        }) { (error) in
+            assert(Thread.current == Thread.main)
+            failure(error.localizedDescription)
+        }
+    }
+
 }
