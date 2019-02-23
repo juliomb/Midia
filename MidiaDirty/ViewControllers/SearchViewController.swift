@@ -13,7 +13,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     let mediaItemCellIdentifier = "MediaItemCell"
 
     var mediaItemProvider: MediaItemProvider!
@@ -29,6 +30,6 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UISearchBarDelegate {
 
-
+    
 
 }

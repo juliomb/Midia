@@ -203,6 +203,10 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="EpA-kb-Uwe">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -211,16 +215,19 @@
                             <constraint firstItem="1xt-z3-gDp" firstAttribute="leading" secondItem="p2q-LF-3Lx" secondAttribute="trailing" constant="10" id="AXz-bR-gMk"/>
                             <constraint firstItem="1xt-z3-gDp" firstAttribute="height" secondItem="p2q-LF-3Lx" secondAttribute="height" id="Ga2-Qh-lb1"/>
                             <constraint firstItem="p2q-LF-3Lx" firstAttribute="top" secondItem="Yfp-ac-S6q" secondAttribute="top" id="WUb-W7-kWH"/>
+                            <constraint firstItem="EpA-kb-Uwe" firstAttribute="centerY" secondItem="IQA-T0-E0n" secondAttribute="centerY" id="XNi-4W-eFx"/>
                             <constraint firstItem="RuB-EP-4qX" firstAttribute="top" secondItem="p2q-LF-3Lx" secondAttribute="bottom" id="Zks-BJ-92v"/>
                             <constraint firstItem="1xt-z3-gDp" firstAttribute="top" secondItem="Yfp-ac-S6q" secondAttribute="top" id="a99-ZM-anh"/>
                             <constraint firstItem="p2q-LF-3Lx" firstAttribute="leading" secondItem="Yfp-ac-S6q" secondAttribute="leading" id="n91-tz-LLS"/>
                             <constraint firstItem="RuB-EP-4qX" firstAttribute="trailing" secondItem="Yfp-ac-S6q" secondAttribute="trailing" id="pyo-2a-Jro"/>
                             <constraint firstItem="RuB-EP-4qX" firstAttribute="bottom" secondItem="Yfp-ac-S6q" secondAttribute="bottom" id="ssp-qU-iPD"/>
+                            <constraint firstItem="EpA-kb-Uwe" firstAttribute="centerX" secondItem="IQA-T0-E0n" secondAttribute="centerX" id="wn7-BK-lqJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yfp-ac-S6q"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="hR3-T3-ouJ"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="EpA-kb-Uwe" id="cVe-5V-dQv"/>
                         <outlet property="collectionView" destination="RuB-EP-4qX" id="Uva-m8-tjj"/>
                         <outlet property="searchBar" destination="p2q-LF-3Lx" id="Xg8-lA-Hdz"/>
                         <outlet property="searchButton" destination="1xt-z3-gDp" id="DtP-ZJ-L5i"/>
