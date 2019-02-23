@@ -14,6 +14,11 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
 
+    let mediaItemCellIdentifier = "MediaItemCell"
+
+    var mediaItemProvider: MediaItemProvider!
+    var mediaItems: [MediaItemProvidable]! = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

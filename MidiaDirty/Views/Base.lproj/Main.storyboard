@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Discover-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MidiaDirty" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,7 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discover" id="1LA-l6-4IE"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="1LA-l6-4IE"/>
                     <connections>
                         <outlet property="activityIndicator" destination="6SM-XL-JNH" id="2B3-m9-6vo"/>
                         <outlet property="collectionView" destination="2UY-MV-tdb" id="VKo-87-6xk"/>
