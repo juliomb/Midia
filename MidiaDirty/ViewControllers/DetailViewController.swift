@@ -69,6 +69,26 @@ class DetailViewController: UIViewController {
         } else {
             creatorLabel.isHidden = true
         }
+
+        if let ratings = mediaItem.rating,
+            let numberOfReviews = mediaItem.numberOfReviews {
+            ratingsLabel.text = "Ratings: \(ratings)/5"
+            numberOfReviewsLabel.text = "\(numberOfReviews) reviews"
+        } else {
+            ratingsContainerView.isHidden = true
+        }
+
+        if let creationDate = mediaItem.creationDate {
+            creationDateLabel.text = "Created on: \(DateFormatter.booksAPIDateFormater.string(from: creationDate))"
+        } else {
+            creationDateLabel.isHidden = true
+        }
+
+        if let price = mediaItem.price {
+            buyButton.setTitle("Buy for \(price)€", for: .normal) // deberíamos tener un objecto currency
+        } else {
+            buyButton.isHidden = true
+        }
     }
 
 }
