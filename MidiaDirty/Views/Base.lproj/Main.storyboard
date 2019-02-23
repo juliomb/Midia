@@ -220,6 +220,11 @@
                         <viewLayoutGuide key="safeArea" id="Yfp-ac-S6q"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="hR3-T3-ouJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RuB-EP-4qX" id="Uva-m8-tjj"/>
+                        <outlet property="searchBar" destination="p2q-LF-3Lx" id="Xg8-lA-Hdz"/>
+                        <outlet property="searchButton" destination="1xt-z3-gDp" id="DtP-ZJ-L5i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QuD-jV-Z3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
