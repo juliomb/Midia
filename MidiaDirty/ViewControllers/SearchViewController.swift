@@ -81,7 +81,7 @@ extension SearchViewController: UICollectionViewDelegate {
         let mediaItem = mediaItems[indexPath.row]
         detailViewController.mediaItemId = mediaItem.mediaItemId
         detailViewController.mediaItemProvider = mediaItemProvider
-
+        self.present(detailViewController, animated: true, completion: nil)
     }
 
 }

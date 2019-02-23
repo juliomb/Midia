@@ -91,6 +91,14 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
 
-    // TODO: al seleccionar media item, ir al detalle
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let detailViewController = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as? DetailViewController else {
+            fatalError()
+        }
+        let mediaItem = mediaItems[indexPath.row]
+        detailViewController.mediaItemId = mediaItem.mediaItemId
+        detailViewController.mediaItemProvider = mediaItemProvider
+        self.present(detailViewController, animated: true, completion: nil)
+    }
 
 }
