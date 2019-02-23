@@ -60,6 +60,7 @@
                                             <constraint firstAttribute="bottom" secondItem="ZHg-KL-n3M" secondAttribute="bottom" constant="10" id="ydu-ZY-tI4"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="imageView" destination="oO4-hR-asZ" id="BbB-PG-Qxf"/>
                                             <outlet property="titleLabel" destination="ZHg-KL-n3M" id="Qg8-s5-pzU"/>
                                         </connections>
                                     </collectionViewCell>

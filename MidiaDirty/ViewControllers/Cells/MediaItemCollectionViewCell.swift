@@ -13,9 +13,13 @@ class MediaItemCollectionViewCell: UICollectionViewCell {
     var mediaItem: MediaItemProvidable! {
         didSet {
             titleLabel.text = mediaItem.title
+            if let url = mediaItem.imageURL {
+                imageView.loadImage(fromURL: url)
+            }
         }
     }
 
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
 
 }
