@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Discover-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MidiaDirty" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,7 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1LA-l6-4IE"/>
+                    <tabBarItem key="tabBarItem" title="Discover" id="1LA-l6-4IE"/>
                     <connections>
                         <outlet property="activityIndicator" destination="6SM-XL-JNH" id="2B3-m9-6vo"/>
                         <outlet property="collectionView" destination="2UY-MV-tdb" id="VKo-87-6xk"/>
@@ -129,11 +129,28 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wrW-QV-KbR"/>
+                        <segue destination="T0Z-oU-eKB" kind="relationship" relationship="viewControllers" id="ULK-pF-pOp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6te-wC-rKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+            <point key="canvasLocation" x="290" y="466"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="yXX-1N-1Jf">
+            <objects>
+                <viewController id="T0Z-oU-eKB" customClass="SearchViewController" customModule="MidiaDirty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQA-T0-E0n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Yfp-ac-S6q"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="hR3-T3-ouJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QuD-jV-Z3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="831"/>
         </scene>
     </scenes>
 </document>
