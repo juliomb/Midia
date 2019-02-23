@@ -13,9 +13,17 @@ class DetailViewController: UIViewController {
     var mediaItemId: String!
     var mediaItemProvider: MediaItemProvider!
 
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        loadingView.isHidden = false
     }
-    
+
+    @IBAction func didTapCloseButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }
