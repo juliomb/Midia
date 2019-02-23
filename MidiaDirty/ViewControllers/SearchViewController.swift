@@ -24,6 +24,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         searchBar.delegate = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
     func performSearch() {
@@ -35,13 +37,11 @@ class SearchViewController: UIViewController {
             self?.mediaItems = mediaItems
             self?.collectionView.reloadData()
             if mediaItems.count == 0 {
-                let alertController = UIAlertController(title: nil, message: "La búqueda no ha devuelto ningún resultado 😞", preferredStyle: .alert)
-                self?.present(alertController, animated: true, completion: nil)
+                self?.presentSimpleAlertController(withMessage: "La búqueda no ha devuelto ningún resultado 😞")
             }
             self?.activityIndicator.isHidden = true
         }) { [weak self] (error) in
-            let alertController = UIAlertController(title: nil, message: "La búqueda ha fallado, por favor compruebe que tiene conexión.", preferredStyle: .alert)
-            self?.present(alertController, animated: true, completion: nil)
+            self?.presentSimpleAlertController(withMessage: "La búqueda ha fallado, por favor compruebe que tiene conexión.")
             self?.activityIndicator.isHidden = true
         }
     }
@@ -53,5 +53,28 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         performSearch()
     }
+
+}
+
+
+extension SearchViewController: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return mediaItems.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: mediaItemCellIdentifier, for: indexPath) as? MediaItemCollectionViewCell else {
+            fatalError()
+        }
+        cell.mediaItem = mediaItems[indexPath.row]
+        return cell
+    }
+
+}
+
+extension SearchViewController: UICollectionViewDelegate {
+
+    // TODO: al seleccionar media item, ir al detalle
 
 }

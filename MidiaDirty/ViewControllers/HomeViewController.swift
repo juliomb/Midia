@@ -91,4 +91,6 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
 
+    // TODO: al seleccionar media item, ir al detalle
+
 }
