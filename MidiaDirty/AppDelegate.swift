@@ -15,8 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        guard let homeViewController = window?.rootViewController as? HomeViewController else {
-            fatalError("Wrong initial View Controller, expected \(HomeViewController.description())")
+        guard let tabBarController = window?.rootViewController as? UITabBarController,
+            let homeViewController = tabBarController.viewControllers?.first as? HomeViewController else {
+                fatalError("Wrong initial setup")
         }
 
         homeViewController.mediaItemProvider = MediaItemProvider(withMediaItemKind: .book)
