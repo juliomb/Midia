@@ -62,6 +62,13 @@ class DetailViewController: UIViewController {
             imageView.loadImage(fromURL: url)
         }
         descriptionTextView.text = mediaItem.description // si es nil, pues sale vacío y todos contentos
+
+        // StackView: si no lo tenemos, ocultamos y la stack view lo pondrá bonito
+        if let creator = mediaItem.creatorName {
+            creatorLabel.text = creator
+        } else {
+            creatorLabel.isHidden = true
+        }
     }
 
 }
