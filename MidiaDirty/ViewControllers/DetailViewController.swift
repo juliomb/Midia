@@ -51,7 +51,17 @@ class DetailViewController: UIViewController {
     }
 
     func syncViewWithModel() {
-        
+        guard let mediaItem = detailedMediaItem else {
+            fatalError("we shouldn't call this method without a loaded model")
+        }
+
+        // Obligatorio
+        titleLabel.text = mediaItem.title
+
+        if let url = mediaItem.imageURL {
+            imageView.loadImage(fromURL: url)
+        }
+        descriptionTextView.text = mediaItem.description // si es nil, pues sale vacío y todos contentos
     }
 
 }
