@@ -34,4 +34,27 @@ class GoogleBooksAPIConsumerAlamofire: MediaItemAPIConsumable {
 
     }
 
+    func getMediaItems(withQueryParams queryParams: String, success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (Error) -> Void) {
+        let paramsArray = queryParams.components(separatedBy: " ")
+        Alamofire.request(GoogleBooksAPIConstants.absoluteURL(withQueryParamas: paramsArray)).responseData { (response) in
+
+            switch response.result {
+            case .failure(let error):
+                failure(error)
+            case .success(_):
+                if let data = response.data {
+                    do {
+                        let decoder = JSONDecoder()
+                        let bookCollection = try decoder.decode(BookCollection.self, from: data)
+                        success(bookCollection.items ?? []) // NO HACE FALTA DISPATCH IN MAIN THREAD
+                    } catch {
+                        failure(error) // Error parseando, lo enviamos directamente, no es el mismo que taskError
+                    }
+                } else {
+                    success([])
+                }
+            }
+        }
+    }
+
 }

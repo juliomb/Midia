@@ -46,4 +46,14 @@ class MediaItemProvider {
         }
     }
 
+    func getMediaItems(withQueryParams queryParams: String, success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (String) -> Void) {
+        apiConsumer.getMediaItems(withQueryParams: queryParams, success: { (mediaItems) in
+            assert(Thread.current == Thread.main)
+            success(mediaItems)
+        }) { (error) in
+            assert(Thread.current == Thread.main)
+            failure(error.localizedDescription)
+        }
+    }
+
 }
