@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MediaItemCollectionViewCell: UICollectionViewCell {
 
@@ -14,12 +15,18 @@ class MediaItemCollectionViewCell: UICollectionViewCell {
         didSet {
             titleLabel.text = mediaItem.title
             if let url = mediaItem.imageURL {
-                imageView.loadImage(fromURL: url)
+                imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
             }
         }
     }
 
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        imageView.sd_cancelCurrentImageLoad()
+    }
 
 }

@@ -26,8 +26,8 @@
 		1453CBFE2219D8F6005C0B09 /* MediaItemProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453CBFC2219D8F6005C0B09 /* MediaItemProvidable.swift */; };
 		14632C8922217A5E0015170E /* MediaItemProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C8822217A5E0015170E /* MediaItemProviderTests.swift */; };
 		14632C8A22217DB30015170E /* GoogleBooksAPIConsumerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D822542220197A00CEA3B2 /* GoogleBooksAPIConsumerAlamofire.swift */; };
-		14632C8B22217DC60015170E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8225622201A9200CEA3B2 /* Constants.swift */; };
 		14632C8D222182A60015170E /* UIImageView+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C8C222182A50015170E /* UIImageView+Networking.swift */; };
+		14632C9022218C200015170E /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 14632C8F22218C200015170E /* placeholder.png */; };
 		149F4D072216CCCC00D15BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D062216CCCC00D15BC1 /* AppDelegate.swift */; };
 		149F4D0C2216CCCC00D15BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0A2216CCCC00D15BC1 /* Main.storyboard */; };
 		149F4D0E2216CCCE00D15BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0D2216CCCE00D15BC1 /* Assets.xcassets */; };
@@ -65,6 +65,7 @@
 		1453CBFC2219D8F6005C0B09 /* MediaItemProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemProvidable.swift; sourceTree = "<group>"; };
 		14632C8822217A5E0015170E /* MediaItemProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemProviderTests.swift; sourceTree = "<group>"; };
 		14632C8C222182A50015170E /* UIImageView+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Networking.swift"; sourceTree = "<group>"; };
+		14632C8F22218C200015170E /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		149F4D032216CCCC00D15BC1 /* MidiaDirty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiaDirty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		149F4D062216CCCC00D15BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		149F4D0B2216CCCC00D15BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +151,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		14632C8E22218BF90015170E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14632C8F22218C200015170E /* placeholder.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		149F4CFA2216CCCC00D15BC1 = {
 			isa = PBXGroup;
 			children = (
@@ -173,9 +182,10 @@
 		149F4D052216CCCC00D15BC1 /* MidiaDirty */ = {
 			isa = PBXGroup;
 			children = (
-				149F4D122216CCCE00D15BC1 /* Info.plist */,
 				149F4D062216CCCC00D15BC1 /* AppDelegate.swift */,
+				149F4D122216CCCE00D15BC1 /* Info.plist */,
 				14D8225622201A9200CEA3B2 /* Constants.swift */,
+				14632C8E22218BF90015170E /* Resources */,
 				149F4D182216CE0A00D15BC1 /* Models */,
 				1453CBFB2219D8CF005C0B09 /* Protocols */,
 				149F4D192216CE1400D15BC1 /* ViewControllers */,
@@ -332,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				149F4D112216CCCE00D15BC1 /* LaunchScreen.storyboard in Resources */,
+				14632C9022218C200015170E /* placeholder.png in Resources */,
 				149F4D0E2216CCCE00D15BC1 /* Assets.xcassets in Resources */,
 				149F4D0C2216CCCC00D15BC1 /* Main.storyboard in Resources */,
 			);
@@ -455,7 +466,6 @@
 				140FD1B3221D7BEE003A79DD /* MediaItemProvider.swift in Sources */,
 				149F4D4A2216D32B00D15BC1 /* BookTests.swift in Sources */,
 				1453CBF92219D08C005C0B09 /* MediaItemCollectionViewCell.swift in Sources */,
-				14632C8B22217DC60015170E /* Constants.swift in Sources */,
 				14D822532220067600CEA3B2 /* GoogleBooksAPIConsumerURLSession.swift in Sources */,
 				1453CBEF22181601005C0B09 /* BookCollection.swift in Sources */,
 			);
