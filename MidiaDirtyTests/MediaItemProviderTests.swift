@@ -15,12 +15,27 @@ class MockMediaItemAPIConsumer: MediaItemAPIConsumable {
         success([MockMediaItem(), MockMediaItem()])
     }
 
+    func getMediaItems(withQueryParams queryParams: String, success: @escaping ([MediaItemProvidable]) -> Void, failure: @escaping (Error) -> Void) {
+        success([MockMediaItem(), MockMediaItem()])
+    }
+
+    func getMediaItem(byId id: String, success: @escaping (MediaItemDetailProvidable) -> Void, failure: @escaping (Error) -> Void) {
+        success(MockMediaItem())
+    }
+
 }
 
-struct MockMediaItem: MediaItemProvidable {
+struct MockMediaItem: MediaItemProvidable, MediaItemDetailProvidable {
 
+    var mediaItemId: String = "123"
     var title: String = "A title"
     var imageURL: URL? = nil
+    var creatorName: String?
+    var rating: Float?
+    var numberOfReviews: Int?
+    var creationDate: Date?
+    var price: Float?
+    var description: String?
 
 }
 

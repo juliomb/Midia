@@ -38,6 +38,8 @@
 		14632C9C2221EA740015170E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C9A2221EA740015170E /* DetailViewController.swift */; };
 		14632C9E2221F7390015170E /* MediaItemDetailProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C9D2221F7390015170E /* MediaItemDetailProvidable.swift */; };
 		14632C9F2221F7390015170E /* MediaItemDetailProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C9D2221F7390015170E /* MediaItemDetailProvidable.swift */; };
+		14632CA02222C32E0015170E /* UIImageView+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14632C8C222182A50015170E /* UIImageView+Networking.swift */; };
+		14632CA12222C3410015170E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D8225622201A9200CEA3B2 /* Constants.swift */; };
 		149F4D072216CCCC00D15BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F4D062216CCCC00D15BC1 /* AppDelegate.swift */; };
 		149F4D0C2216CCCC00D15BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0A2216CCCC00D15BC1 /* Main.storyboard */; };
 		149F4D0E2216CCCE00D15BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 149F4D0D2216CCCE00D15BC1 /* Assets.xcassets */; };
@@ -482,7 +484,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				140FD1B4221D7BF1003A79DD /* MediaItemAPIConsumable.swift in Sources */,
+				14632CA12222C3410015170E /* Constants.swift in Sources */,
 				140FD1B5221D7C06003A79DD /* Game.swift in Sources */,
+				14632CA02222C32E0015170E /* UIImageView+Networking.swift in Sources */,
 				1453CBF62219698E005C0B09 /* HomeViewController.swift in Sources */,
 				14632C8A22217DB30015170E /* GoogleBooksAPIConsumerAlamofire.swift in Sources */,
 				149F4D4B2216D67D00D15BC1 /* Book.swift in Sources */,
