@@ -318,7 +318,7 @@
                                         <connections>
                                             <outlet property="creationDateLabel" destination="JNg-Pv-nLM" id="mGD-b6-QNi"/>
                                             <outlet property="creatorsLabel" destination="rTm-Gn-PgG" id="Wpo-Tu-YPX"/>
-                                            <outlet property="imageView" destination="8VH-el-5Nw" id="qJU-cv-qNn"/>
+                                            <outlet property="mediaItemImageView" destination="8VH-el-5Nw" id="Ag9-zC-wRH"/>
                                             <outlet property="priceLabel" destination="PKn-bJ-Szm" id="wPo-97-1ig"/>
                                             <outlet property="titleLabel" destination="eT8-6N-JM2" id="O9h-VG-urn"/>
                                         </connections>
