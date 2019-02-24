@@ -16,7 +16,7 @@ class BookTests: XCTestCase {
 
     override func setUp() {
         bestBookEver = Book(bookId: "1", title: "El nombre del viento")
-        detailedBook = Book(bookId: "2", title: "El temor de un hombre sabio", authors: ["Patrick R."], publishedDate:DateFormatter.booksAPIDateFormater.date(from: "01-01-2001"), description: "Librazo", coverURL: coverURL, rating: 5.0, numberOfReviews: 1, price: 10.99)
+        detailedBook = Book(bookId: "2", title: "El temor de un hombre sabio", authors: ["Patrick R."], publishedDate:DateFormatter.booksAPIDateFormater.date(from: "2001-01-01"), description: "Librazo", coverURL: coverURL, rating: 5.0, numberOfReviews: 1, price: 10.99)
     }
 
     func testBookExistence() {
@@ -62,6 +62,11 @@ class BookTests: XCTestCase {
             XCTAssertNotNil(book)
             XCTAssertNotNil(book.bookId)
             XCTAssertNotNil(book.title)
+            XCTAssertNotNil(book.authors)
+            XCTAssert(book.authors!.count > 0)
+            XCTAssertNotNil(book.publishedDate)
+            XCTAssertNotNil(book.description)
+            XCTAssertNotNil(book.coverURL)
         } catch {
             XCTFail()
         }
