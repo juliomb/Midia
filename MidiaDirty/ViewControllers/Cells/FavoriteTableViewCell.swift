@@ -10,5 +10,11 @@ import UIKit
 
 class FavoriteTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var creatorsLabel: UILabel!
+    @IBOutlet weak var creationDateLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
 
+    
 }
