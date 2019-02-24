@@ -35,7 +35,7 @@ struct Book {
     
 }
 
-extension Book: Decodable {
+extension Book: Codable {
 
     enum CodingKeys: String, CodingKey {
         case bookId = "id"
@@ -89,6 +89,15 @@ extension Book: Decodable {
         } catch {
             price = nil
         }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(bookId, forKey: .bookId)
+        try container.encode(title, forKey: .title)
+//
+//        var additionalInfo = container.nestedContainer(keyedBy: AdditionalInfoKeys.self, forKey: .additionalInfo)
+//        try additionalInfo.encode(elevation, forKey: .elevation)
     }
 
 }
