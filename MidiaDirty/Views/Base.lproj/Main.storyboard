@@ -231,10 +231,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="830.73463268365822"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="2dL-S1-ia4">
             <objects>
-                <viewController id="yii-NE-TJc" sceneMemberID="viewController">
+                <viewController id="yii-NE-TJc" customClass="FavoritesViewController" customModule="MidiaDirty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yyS-MD-t9N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -336,6 +336,9 @@
                         <viewLayoutGuide key="safeArea" id="BSn-Sb-zcl"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="led-g0-HBK"/>
+                    <connections>
+                        <outlet property="tableView" destination="diF-MA-aJn" id="bNO-3l-DWo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhd-d7-XYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

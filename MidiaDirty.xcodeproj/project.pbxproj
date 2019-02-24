@@ -13,6 +13,7 @@
 		140FD1B3221D7BEE003A79DD /* MediaItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FD1AD221D6E7B003A79DD /* MediaItemProvider.swift */; };
 		140FD1B4221D7BF1003A79DD /* MediaItemAPIConsumable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FD1AF221D7747003A79DD /* MediaItemAPIConsumable.swift */; };
 		140FD1B5221D7C06003A79DD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140FD1B1221D7AE7003A79DD /* Game.swift */; };
+		141C7B79222319B3003AFC08 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141C7B78222319B3003AFC08 /* FavoritesViewController.swift */; };
 		1453CBEC2218146E005C0B09 /* book-search-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 1453CBEB2218146D005C0B09 /* book-search-response.json */; };
 		1453CBEE22181601005C0B09 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453CBED22181601005C0B09 /* BookCollection.swift */; };
 		1453CBEF22181601005C0B09 /* BookCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453CBED22181601005C0B09 /* BookCollection.swift */; };
@@ -77,6 +78,7 @@
 		140FD1AD221D6E7B003A79DD /* MediaItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemProvider.swift; sourceTree = "<group>"; };
 		140FD1AF221D7747003A79DD /* MediaItemAPIConsumable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemAPIConsumable.swift; sourceTree = "<group>"; };
 		140FD1B1221D7AE7003A79DD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		141C7B78222319B3003AFC08 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		1453CBEB2218146D005C0B09 /* book-search-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "book-search-response.json"; sourceTree = "<group>"; };
 		1453CBED22181601005C0B09 /* BookCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollection.swift; sourceTree = "<group>"; };
 		1453CBF12218272B005C0B09 /* DateFormatter+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Custom.swift"; sourceTree = "<group>"; };
@@ -252,9 +254,10 @@
 		149F4D192216CE1400D15BC1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1453CBF42219698E005C0B09 /* HomeViewController.swift */,
-				14632C912221BBE30015170E /* SearchViewController.swift */,
 				14632C9A2221EA740015170E /* DetailViewController.swift */,
+				1453CBF42219698E005C0B09 /* HomeViewController.swift */,
+				141C7B78222319B3003AFC08 /* FavoritesViewController.swift */,
+				14632C912221BBE30015170E /* SearchViewController.swift */,
 				1453CBFA2219D096005C0B09 /* Cells */,
 			);
 			path = ViewControllers;
@@ -502,6 +505,7 @@
 				14D822552220197A00CEA3B2 /* GoogleBooksAPIConsumerAlamofire.swift in Sources */,
 				14632CA422230EE80015170E /* FavoritesProvidable.swift in Sources */,
 				14D822522220067600CEA3B2 /* GoogleBooksAPIConsumerURLSession.swift in Sources */,
+				141C7B79222319B3003AFC08 /* FavoritesViewController.swift in Sources */,
 				1453CBF52219698E005C0B09 /* HomeViewController.swift in Sources */,
 				14632CAD222315950015170E /* FavoriteTableViewCell.swift in Sources */,
 			);
