@@ -11,6 +11,6 @@ import Foundation
 protocol FavoritesProvidable {
 
     func getFavoritesList() -> [MediaItemProvidable]?
-    func getFavorite(withId id: String) -> MediaItemDetailProvidable
+    func getFavorite(withId id: String) -> MediaItemDetailProvidable?
 
 }

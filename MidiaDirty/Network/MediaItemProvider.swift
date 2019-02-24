@@ -8,12 +8,6 @@
 
 import Foundation
 
-enum MediaItemKind {
-    case book
-    case movie
-    case game
-}
-
 class MediaItemProvider {
 
     let mediaItemKind: MediaItemKind
