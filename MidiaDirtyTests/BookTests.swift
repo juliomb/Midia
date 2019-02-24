@@ -48,5 +48,18 @@ class BookTests: XCTestCase {
             XCTFail()
         }
     }
+    
+    func testDecodeEncodedBook() {
+        let encoder = JSONEncoder()
+        let decoder = JSONDecoder()
+        do {
+            let bookData = try encoder.encode(bestBookEver)
+            XCTAssertNotNil(bookData)
+            let book = try decoder.decode(Book.self, from: bookData)
+            XCTAssertNotNil(book)
+        } catch {
+            XCTFail()
+        }
+    }
 
 }
