@@ -178,6 +178,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		14632CA222230E160015170E /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		149F4CFA2216CCCC00D15BC1 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +208,7 @@
 		149F4D052216CCCC00D15BC1 /* MidiaDirty */ = {
 			isa = PBXGroup;
 			children = (
+				14632CA222230E160015170E /* Persistence */,
 				149F4D062216CCCC00D15BC1 /* AppDelegate.swift */,
 				149F4D122216CCCE00D15BC1 /* Info.plist */,
 				14D8225622201A9200CEA3B2 /* Constants.swift */,

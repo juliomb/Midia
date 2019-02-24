@@ -13,6 +13,10 @@ class BookTests: XCTestCase {
     var bestBookEver: Book!
     var detailedBook: Book!
     let coverURL = URL(string: "http://books.google.com/books/content?id=gp1nCoebxCAC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71R548ji46kE8h4amBNrkJp2Stl-1WU9CE9qO0Wvdp_wFKKSN5ZlkMSr6WOQByhIYWfmeKjk2SloXR8JsJ2HmZf7bU6C9tuL1mTo40REgbGlU0JXJ59S6ShKTVYZ7xg76nA77qj&source=gbs_api")
+    let encoder = JSONEncoder()
+    let decoder = JSONDecoder()
+    let userDefaults = UserDefaults.init(suiteName: "tests")!
+    let bookKey = "bookKey"
 
     override func setUp() {
         bestBookEver = Book(bookId: "1", title: "El nombre del viento")
@@ -31,7 +35,6 @@ class BookTests: XCTestCase {
 
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
-            let decoder = JSONDecoder()
             let bookCollection = try decoder.decode(BookCollection.self, from: data)
             XCTAssertNotNil(bookCollection)
             let firstBook = bookCollection.items?.first
@@ -43,7 +46,6 @@ class BookTests: XCTestCase {
     }
 
     func testEncodeBook() {
-        let encoder = JSONEncoder()
         do {
             let bookData = try encoder.encode(bestBookEver)
             XCTAssertNotNil(bookData)
@@ -53,8 +55,6 @@ class BookTests: XCTestCase {
     }
     
     func testDecodeEncodedDetailedBook() {
-        let encoder = JSONEncoder()
-        let decoder = JSONDecoder()
         do {
             let bookData = try encoder.encode(detailedBook)
             XCTAssertNotNil(bookData)
@@ -70,6 +70,21 @@ class BookTests: XCTestCase {
             XCTAssertNotNil(book.rating)
             XCTAssertNotNil(book.numberOfReviews)
             XCTAssertNotNil(book.price)
+        } catch {
+            XCTFail()
+        }
+    }
+
+    func testPersistOnUserDefaults() {
+        do {
+            userDefaults.set(try encoder.encode(detailedBook), forKey: bookKey)
+            userDefaults.synchronize()
+            if let bookData = userDefaults.object(forKey: bookKey) as? Data {
+                let recovered = try decoder.decode(Book.self, from: bookData)
+                XCTAssertNotNil(recovered)
+            } else {
+                XCTFail()
+            }
         } catch {
             XCTFail()
         }
