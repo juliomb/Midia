@@ -104,6 +104,13 @@ extension Book: Codable {
 
         var imageLinks = volumeInfo.nestedContainer(keyedBy: CodingKeys.self, forKey: .imageLinks)
         try imageLinks.encodeIfPresent(coverURL, forKey: .coverURL)
+
+        try volumeInfo.encodeIfPresent(rating, forKey: .rating)
+        try volumeInfo.encodeIfPresent(numberOfReviews, forKey: .numberOfReviews)
+
+        var saleInfo = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .saleInfo)
+        var listPrice = saleInfo.nestedContainer(keyedBy: CodingKeys.self, forKey: .listPrice)
+        try listPrice.encodeIfPresent(price, forKey: .price)
     }
 
 }

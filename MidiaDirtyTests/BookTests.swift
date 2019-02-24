@@ -67,6 +67,9 @@ class BookTests: XCTestCase {
             XCTAssertNotNil(book.publishedDate)
             XCTAssertNotNil(book.description)
             XCTAssertNotNil(book.coverURL)
+            XCTAssertNotNil(book.rating)
+            XCTAssertNotNil(book.numberOfReviews)
+            XCTAssertNotNil(book.price)
         } catch {
             XCTFail()
         }
