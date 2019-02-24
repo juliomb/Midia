@@ -10,7 +10,8 @@ import Foundation
 
 class UserDefaultsStorageManager: FavoritesProvidable {
 
-    func getFavoritesList() -> [MediaItemProvidable]? {
+    func getFavoritesList() -> [MediaItemDetailProvidable]? {
+        // TODO
         return nil
     }
 
