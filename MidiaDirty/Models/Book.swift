@@ -20,17 +20,16 @@ struct Book {
     let numberOfReviews: Int?
     let price: Float?
 
-    // TODO: eliminar cuando tengamos la capa de red
-    init(bookId: String, title: String) {
+    init(bookId: String, title: String, authors: [String]? = nil, publishedDate: Date? = nil, description: String? = nil, coverURL: URL? = nil, rating: Float? = nil, numberOfReviews: Int? = nil, price: Float? = nil) {
         self.bookId = bookId
         self.title = title
-        authors = nil
-        publishedDate = nil
-        description = nil
-        coverURL = nil
-        rating = nil
-        numberOfReviews = nil
-        price = nil
+        self.authors = authors
+        self.publishedDate = publishedDate
+        self.description = description
+        self.coverURL = coverURL
+        self.rating = rating
+        self.numberOfReviews = numberOfReviews
+        self.price = price
     }
     
 }
@@ -94,10 +93,17 @@ extension Book: Codable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(bookId, forKey: .bookId)
-        try container.encode(title, forKey: .title)
-//
-//        var additionalInfo = container.nestedContainer(keyedBy: AdditionalInfoKeys.self, forKey: .additionalInfo)
-//        try additionalInfo.encode(elevation, forKey: .elevation)
+
+        var volumeInfo = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .volumeInfo)
+        try volumeInfo.encode(title, forKey: .title)
+        try volumeInfo.encodeIfPresent(authors, forKey: .authors)
+        if let date = publishedDate {
+            try volumeInfo.encode(DateFormatter.booksAPIDateFormater.string(from: date), forKey: .publishedDate)
+        }
+        try volumeInfo.encodeIfPresent(description, forKey: .description)
+
+        var imageLinks = volumeInfo.nestedContainer(keyedBy: CodingKeys.self, forKey: .imageLinks)
+        try imageLinks.encodeIfPresent(coverURL, forKey: .coverURL)
     }
 
 }
